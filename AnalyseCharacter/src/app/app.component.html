@@ -1,0 +1,13 @@
+<div class="container">
+    <div #heading></div>
+    <input type="text" #inputText (input)="onInput(inputText.value)">  
+    <div *ngIf="inputText.value.length>0">
+        <h2>Results</h2>
+
+        <h2>Number of characters:  {{inputText.value.length}}</h2>
+
+        <div *ngFor="let word of vowels">
+            {{word.letter}}: {{word.count}}
+        </div>
+    </div>
+</div>
